@@ -1,14 +1,20 @@
 #!/usr/bin/python3
 import sys
 import pygame
+from setting import Settings
 
 
 def run_game():
     #初始化游戏并创建一个屏幕对象
     pygame.init()
-    screen = pygame.display.set_mode((1200,800))
+    #screen = pygame.display.set_mode((1200,800))
+    ai_settings = Settings()
+
     pygame.display.set_caption("Alien Invasion")
 
+
+    #设置背景颜色
+    bg_color = (230, 230, 230)
     #开始游戏的主循环
     while True:
 
@@ -17,7 +23,9 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-            #让最近描绘的屏幕可见
-            pygame.display.flip()
+        #每次循环时都会重绘屏幕
+        screen.fill(bg_color)
+        #让最近描绘的屏幕可见
+        pygame.display.flip()
 
 run_game()
