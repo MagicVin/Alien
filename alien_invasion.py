@@ -2,10 +2,11 @@
 import sys
 import pygame
 
+
 def run_game():
     #初始化游戏并创建一个屏幕对象
     pygame.init()
-    screen = pygame.display.set_mode(1200,800)
+    screen = pygame.display.set_mode((1200,800))
     pygame.display.set_caption("Alien Invasion")
 
     #开始游戏的主循环
@@ -17,6 +18,6 @@ def run_game():
                 sys.exit()
 
             #让最近描绘的屏幕可见
-            pygame.dissplay.flip()
+            pygame.display.flip()
 
 run_game()
