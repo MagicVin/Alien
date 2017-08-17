@@ -20,7 +20,7 @@ def run_game():
 
 
     #设置背景颜色
-    bg_color = (230, 230, 230)
+    #bg_color = (230, 230, 230)
     #开始游戏的主循环
     while True:
         gf.check_events(ship)
